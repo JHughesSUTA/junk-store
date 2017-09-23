@@ -1,2 +1,3 @@
 class JunksController < ApplicationController
+  
 end
