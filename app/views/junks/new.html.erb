@@ -1,6 +1,8 @@
 <h3>Add Junk!</h3>
 <%= form_tag '/junks', method: :post do %> 
-  <%= label_tag :name %> 
-  <%= text_field_tag :name %> 
+  <div>
+    <%= label_tag :name %> 
+    <%= text_field_tag :name %>
+  </div>
   <%= submit_tag 'Add Junk' %>
 <% end %>

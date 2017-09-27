@@ -1,2 +1,13 @@
 <h2>Junk info:</h2>
-<p>Name: <%= @junk.name %></p>
+<div>
+  <p>Name: <%= @junk.name %></p>
+</div>
+<div>
+  <a href="/junks/<%= @junk.id %>/edit">Edit</a>
+</div>
+<div>
+  <a href="/junks">Back to All Junk</a>
+</div>
+<%= form_tag "/junks/#{@junk.id}", method: :delete do %>
+  <input type="submit" value="delete">
+<% end %>

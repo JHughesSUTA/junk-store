@@ -1,4 +1,8 @@
-<h2>JUNK!</h2>
+<h2>Welcome to the Junkyard!</h2>
 <% @junks.each do |junk| %>
   <h4><%= junk.name %> </h4>
+  <a href="/junks/<%= junk.id%>">More Info</a>
 <% end %>
+<div>
+  <a href="/junks/new">Add Junk</a>
+</div>

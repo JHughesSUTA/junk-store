@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'junks#index'
   get '/junks' => 'junks#index'
   get '/junks/new' => 'junks#new'
   post '/junks' => 'junks#create'

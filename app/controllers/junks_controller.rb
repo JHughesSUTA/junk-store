@@ -18,4 +18,23 @@ class JunksController < ApplicationController
     @junk = Junk.find_by(id: junk_id)
     render 'show.html.erb'
   end
+
+  def edit
+    @junk = Junk.find_by(id: params[:id])
+    render "edit.html.erb"
+  end
+
+  def update
+    @junk = Junk.find_by(id: params[:id])
+    @junk.update(
+      name: params[:name]
+    )
+    render "update.html.erb"
+  end
+
+  def destroy
+    @junk = Junk.find_by(id: params[:id])
+    @junk.destroy 
+    render "destroy.html.erb"
+  end
 end

@@ -1,0 +1,11 @@
+<h3>Edit Junk</h3>
+<div>
+  <%= form_tag "/junks/#{@junk.id}", method: :patch do %>
+    <%= label_tag :name %> 
+    <%= text_field_tag :name, @junk.name %> 
+    <%= submit_tag 'Edit' %>
+  <% end %>
+</div>
+<div>
+  <a href="/junks/<%= @junk.id %>">Back</a>
+</div>
