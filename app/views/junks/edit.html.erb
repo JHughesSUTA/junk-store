@@ -1,8 +1,18 @@
 <h3>Edit Junk</h3>
 <div>
   <%= form_tag "/junks/#{@junk.id}", method: :patch do %>
-    <%= label_tag :name %> 
-    <%= text_field_tag :name, @junk.name %> 
+    <div>
+      <%= label_tag :name %> 
+      <%= text_field_tag :name, @junk.name %>
+    </div>
+    <div>
+      <%= label_tag :description %> 
+      <%= text_field_tag :description, @junk.description %>
+    </div>
+    <div>
+      <%= label_tag :image %> 
+      <%= text_field_tag :image, @junk.image %>
+    </div>
     <%= submit_tag 'Edit' %>
   <% end %>
 </div>
